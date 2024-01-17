@@ -1,0 +1,95 @@
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+    // color: white;
+  }
+  
+  .select-wrapper {
+    position: relative;
+    width: 250px;
+    // Dropdown icon
+    &::after {
+      color: black;
+      content: '▾';
+      margin-right: 10px;
+      pointer-events: none;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      font-size: 20px;
+    }
+  }
+  
+  // Default state
+  .select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    // background: white;
+    // border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+    &:focus {
+      color: black;
+    }
+    // Hack for IE 11+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+
+  .btn {
+    /* сброс стилей */
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 2rem;
+    
+    /* переопределение стилей для ссылок */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  
+    /* небольшие вертикальные отступы */
+    margin: 2px 0;
+  
+    /* невидимая рамка */
+    border: solid 1px transparent;
+    border-radius: 4px;
+  
+    /* для установки размеров используем паддинги */
+    padding: 0.5em 1em;
+  
+    /* контрастные цвета */
+    color: #ffffff;
+    background-color: #9555af;
+  }
+  /* Optional styling */
+
+  ::ng-deep .tooltip {
+    position: absolute;
+    background-color: red;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    /* Other styles as needed */
+  }
+  
+  /* Hide the tooltip by default */
+  .tooltip {
+    display: none;
+  }
+  
+  /* Show the tooltip when hovering over the element */
+  .tooltip:hover {
+    display: block;
+  }
+  

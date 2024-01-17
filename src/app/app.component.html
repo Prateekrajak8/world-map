@@ -1,0 +1,23 @@
+
+
+<div class="body-container" style="display: flex; gap:1rem">
+  <svg width="960" height="500"></svg>
+
+<div class="container">
+  <h1>Select Continent</h1>
+
+    <div class="select-wrapper">
+      <select class="select" [(ngModel)]="selectedContinent" (change)="handleChange($event)">
+        <option value="">Select</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="Reset">Reset</option>
+        <!-- Add more continent options as needed -->
+      </select>
+    </div>
+
+    <button type="button" class="btn" (click)="downloadPPT()">Download</button>
+</div>
+</div>
+<app-tooltip *ngIf="tooltipContent"></app-tooltip>
+
